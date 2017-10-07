@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="E-Ticket Try Out PRS 2018">
+    <meta name="keywords" content="E-Ticket, Padjadjaran Riau, Try Out">
+    <meta name="author" content="Bela Moneta">
+    <title> Padjadjaran Roadshow to School | Registration SAINTEK Presale 1 </title>
+    <link rel="stylesheet" href="./css/form.css">
+
+    </head>
+    <body>
+     <header>
+        <div class="sub_header">
+        <div id="branding">
+          <h1> <span class="highlighter"> Padjadjaran </span> Roadshow to School</h1>
+            <nav>
+              <ul>
+               <li class="currentt">  <a href="index.html"> Home </a> </li>
+              <li> <a href="E-Ticket.html">  E-Ticket  </a> </li>
+              <li> <a href="About.html"> About  </a> </li>
+              </ul>
+            </nav>
+        </div>
+        </div>
+     </header>
+
+
+
+    <section>
+      <?php include('index.php');?>
+      <div class="container">
+        <form id="contact" action=" <?= $_SERVER['PHP_SELF'];?> " method="post">
+          <h3>Registration</h3>
+          <h4>Fill the registration, and get your e-ticket with in 24 hours!</h4>
+          <fieldset>
+            <td>
+              Nama
+            </td>
+            <input placeholder="Your name" type="text" tabindex="1" name="name" value=" <? $name ?>" autofocus>
+            <span class="error"><?= $name_error ?> </span>
+          </fieldset>
+          <fieldset>
+            <td>
+              Email
+            </td>
+            <input placeholder="Your Email Address" type="email" tabindex="2" name="email" value="<? $email ?>">
+            <span class="error"> <?= $email_error ?> </span>
+          </fieldset>
+          <fieldset>
+            <td>
+              Nomor Hp
+            </td>
+            <input placeholder="Your Phone Number" type="tel" tabindex="3" name="phone_number" value="<? $phone_number ?>">
+            <span class="error"> <? $phone_number_error ?> </span>
+          </fieldset>
+          <fieldset>
+            <td>
+              Jenis Tiket
+            </td>
+            <p  div class="kotak" name="saintek1">
+               SAINTEK
+             </p>
+            <span class="error"> <? $saintek1_error ?> </spam>
+          </fieldset>
+          <fieldet>
+            <td>
+              Harga
+            </td>
+
+              <p div class="kotak" name="harga">
+                Rp. 15.000
+              </p>
+            <span class="error"> <? $harga_error ?>  </span>
+          </fieldset>
+          <fieldset>
+            <td>
+              Kota Try-Out
+            </td>
+            <select div class="kotak" name="kota">
+              <option> Pekanbaru </option>
+              <option> Duri </option>
+              <option> Siak </option>
+              <option> Taluk Kuantan </option>
+            </select>
+            <span class="error"> <? $kota_error ?>  </span>
+          </fieldset>
+          <fieldset>
+            <div class="resi">
+              <td>
+                Bukti Pembayaran
+              </td>
+              <input type="file" value="<? $file ?>" name="file"/>
+              <span class="error"> <? $file_error ?> </span>
+            </div>
+          </fieldset>
+          <fieldset>
+            <button  name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+          </fieldset>
+          <div class="success"> <?= $success; ?> </div>
+        </form>
+      </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section id="footer">
+          <div class="footer">
+            <p> Padjadjaran Roadshow to School, Copyright &copy; 2017 </p>
+          </div>
+        </section>
+        </body>
+</html>
